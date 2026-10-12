@@ -1,0 +1,29 @@
+{
+  "name": "expense-tracker-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "utils.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waleedabdi/Expense-Tracker-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waleedabdi/Expense-Tracker-Project/issues"
+  },
+  "homepage": "https://github.com/waleedabdi/Expense-Tracker-Project#readme",
+  "devDependencies": {
+    "eslint": "^10.12.0",
+    "jest": "^30.5.2"
+  }
+}
+
