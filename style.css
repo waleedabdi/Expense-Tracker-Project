@@ -1,0 +1,249 @@
+:root {
+  --bg: #eef3f6;
+  --surface: #ffffff;
+  --ink: #16263a;
+  --muted: #5d6b7a;
+  --line: #d6dee5;
+  --accent: #0e7c86;
+  --accent-dark: #0a5f67;
+  --danger: #b3261e;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.base-currency {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Total */
+.total {
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.total-label {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.total-amount {
+  margin: 0.25rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.rate-status {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field:first-child {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+input,
+select {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn {
+  grid-column: 1 / -1;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+}
+
+.error {
+  min-height: 1.2em;
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--danger);
+}
+
+/* Expense list */
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.list-header h2 {
+  margin: 0;
+}
+
+.expense-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.expense {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.expense:last-child {
+  border-bottom: none;
+}
+
+.expense-info,
+.expense-amounts {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-info {
+  flex: 1;
+}
+
+.expense-name {
+  font-weight: 600;
+}
+
+.expense-meta,
+.expense-original {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.expense-amounts {
+  text-align: right;
+}
+
+.expense-converted {
+  font-weight: 600;
+}
+
+.btn-delete {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--danger);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #fdecea;
+  border-color: var(--danger);
+}
+
+.empty {
+  margin: 0;
+  padding: 1rem 0 0.25rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .total-amount {
+    font-size: 2rem;
+  }
+}
