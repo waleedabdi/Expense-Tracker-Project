@@ -1,16 +1,29 @@
 :root {
-  --bg: #eef3f6;
+  --bg: #000000;
   --surface: #ffffff;
-  --ink: #16263a;
-  --muted: #5d6b7a;
-  --line: #d6dee5;
-  --accent: #0e7c86;
-  --accent-dark: #0a5f67;
-  --danger: #b3261e;
+  --ink: #000000;
+  --muted: #444444;
+  --line: rgba(0, 0, 0, 0.18);
+  --accent: #d00000;
+  --accent-dark: #a00000;
+  --danger: #c00000;
   --radius: 10px;
 }
 
-* {
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #ffffff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* Keep text readable inside the white cards. */
+.card {
+  color: var(--ink);
+}
+
+ {
   box-sizing: border-box;
 }
 
@@ -28,7 +41,7 @@ body {
   padding: 1.5rem 1rem 3rem;
 }
 
-/* Header */
+
 .app-header {
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +69,6 @@ h2 {
   color: var(--muted);
 }
 
-/* Total */
 .total {
   background: var(--ink);
   color: #fff;
@@ -83,7 +95,6 @@ h2 {
   opacity: 0.75;
 }
 
-/* Cards */
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -92,7 +103,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Form */
+
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -154,7 +165,6 @@ button:focus-visible {
   color: var(--danger);
 }
 
-/* Expense list */
 .list-header {
   display: flex;
   align-items: center;
@@ -237,7 +247,6 @@ button:focus-visible {
   text-align: center;
 }
 
-/* Small screens */
 @media (max-width: 480px) {
   .form {
     grid-template-columns: 1fr;
