@@ -14,7 +14,7 @@ Since we were working from two different laptops, we broke down the files like t
 *   Jest (for the math unit tests)
 *   ESLint (for syntax checking)
 *   Live Currency Rat
-=======
+
 # Expense Tracker with Live Currency Conversion
 
 A modern, single-page web application designed to help users log daily expenses in various global currencies while calculating aggregated totals in real-time using live currency exchange REST APIs.
